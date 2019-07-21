@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<form method="post">
+    <head>
+{% csrf_token %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><font size="50">Кабо fix</font></a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">
+                    <!-- <a class="nav-item nav-link active" href="#">Коллективный разум <span class="sr-only">(current)</span></a> -->
+                    <a class="nav-item nav-link" href="#">Написать</a>
+                    <a class="nav-item nav-link" href="problems">Проблемы</a>
+                    <a class="nav-item nav-link" href="me">Мои заявки</a>
+                    </div>
+                    <a href="/logout" type="submit"  class="btn btn-outline-secondary">Выход</a>
+                </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+</form>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</head>
+<title>margin-left</title>
+<title>margin-right</title>
+<style>
+   .layer1 {
+    background-color: #; /* Цвет фона */
+   }
+   .layer2 {
+    margin-left: 20%; /* Отступ слева */
+    margin-right: 25%; /* Отступ справа */
+    background-color: #; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+<div class="layer1">
+    <div class="layer2">
+        <div class="card">
+
+            <div class="card-body">
+
+                <div class="container-fluid"><h1> Добро пожаловать! </h1></div>
+                <!--{{poem.text}}-->
+            </div>
+        </div>
+
+        <!--<h3> Продолжить рассказ: </h3>-->
+        <form method="POST">
+            <table>{% csrf_token %}
+                <label for="exampleInput">Краткое описание:</label>
+                <input id="exampleInput" class="form-control" aria-describedby="emaildHel"
+                       placeholder="Нет интернета" name="Imya">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Жалоба:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="13" name="text"></textarea>
+                </div>
+            </table>
+            <input value="Добавить жалобу" type="submit" class="btn btn-primary" name="submit">
+        </form>
+    </div>
+</div>
+
+
+<!--<iframe width="560" height="315" src='' frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+
+
+</body>
+</html>

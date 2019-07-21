@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><font size="50">Кабо fix</font></a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">
+                    <!-- <a class="nav-item nav-link active" href="#">Коллективный разум <span class="sr-only">(current)</span></a> -->
+                    <a class="nav-item nav-link" href="index">Написать</a>
+                    <a class="nav-item nav-link" href="problems">Проблемы</a>
+                    <a class="nav-item nav-link" href="me">Мои заявки</a>
+                   </div>
+                    <a href="/logout" type="submit"  class="btn btn-outline-secondary">Выход</a>
+                </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+</form>
+</body>
+
+
+<body>
+<title>margin-left</title>
+<title>margin-right</title>
+<style>
+   .layer1 {
+    background-color: #; /* Цвет фона */
+   }
+   .layer2 {
+    margin-left: 20%; /* Отступ слева */
+    margin-right: 25%; /* Отступ справа */
+    background-color: #; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+   }
+
+</style>
+<div class="layer1">
+    <div class="layer2">
+        <div class="card">
+
+            {% for i in history %}
+
+
+            <div class="card">
+                <h5 class="card-header">{{ i.Imya }}</h5>
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">{{ i.text }}</p>
+                    <p class="text-muted">{{i.author.username}}</p>
+                    <button type="button" class="btn btn-primary">
+                        <a href="/like?id={{ i.id }}" class="btn btn-primary">{{ i.counts }}</a>
+                    </button>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+</body>
+
+
+</html>
